@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to the Farming Awareness Platform to access your account.">
+    <title>Sign In - Farming Awareness Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the sign-in page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #2e8b57;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .signin-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .signin-container h1 {
+            text-align: center;
+            color: #2e8b57;
+        }
+
+        .signin-container label {
+            font-size: 1em;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .signin-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .signin-container input[type="submit"] {
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signin-container input[type="submit"]:hover {
+            background-color: #1e5d3d;
+        }
+
+        .signup-option {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-option a {
+            color: #2e8b57;
+            text-decoration: none;
+        }
+
+        .signup-option a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function redirectToHome(event) {
+            // Prevent form from submitting the traditional way
+            event.preventDefault();
+            
+            // Redirect to the home page
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Farming Awareness Platform - Sign In</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+    </nav>
+
+    <div class="signin-container">
+        <h1>Sign In to Your Account</h1>
+        <!-- Modify the form's action to "index.html" or use JavaScript for redirection -->
+        <form onsubmit="redirectToHome(event)">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Sign In">
+        </form>
+
+        <div class="signup-option">
+            <p>Don't have an account? <a href="sign up.html">Sign Up</a></p>
+        </div>
+    </div>
+
+   
+</body>
+</html>
